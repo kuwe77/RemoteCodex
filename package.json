@@ -1,0 +1,54 @@
+﻿{
+    "name":  "remotecodex",
+    "version":  "1.0.0",
+    "description":  "RemoteCodex with image prompts, session resume, clean file links, and Codex Desktop mirroring.",
+    "type":  "module",
+    "main":  "src/index.js",
+    "files":  [
+                  "src",
+                  "public",
+                  "docs/screenshot.png",
+                  "scripts/configure-telegram.cmd",
+                  "scripts/configure-telegram.ps1",
+                  "scripts/start-remotecodex.cmd",
+                  "scripts/start-remotecodex.ps1",
+                  "scripts/stop-remotecodex.cmd",
+                  "scripts/stop-remotecodex.ps1",
+                  "scripts/run-remotecodex-supervisor.ps1",
+                  "scripts/run-remotecodex-worker.ps1",
+                  "README.md",
+                  "LICENSE",
+                  "package.json"
+              ],
+    "engines":  {
+                    "node":  "\u003e=24"
+                },
+    "repository":  {
+                       "type":  "git",
+                       "url":  "git+https://github.com/kuwe77/remotecodex.git"
+                   },
+    "bugs":  {
+                 "url":  "https://github.com/kuwe77/remotecodex/issues"
+             },
+    "homepage":  "https://github.com/kuwe77/remotecodex#readme",
+    "scripts":  {
+                    "start":  "node src/index.js",
+                    "check":  "node --check src/index.js \u0026\u0026 node --check src/server.js \u0026\u0026 node --check src/routes/api-routes.js \u0026\u0026 node --check src/agent-orchestrator/message-service.js",
+                    "telegram:configure":  "powershell -ExecutionPolicy Bypass -File scripts/configure-telegram.ps1",
+                    "telegram:start":  "powershell -ExecutionPolicy Bypass -File scripts/start-remotecodex.ps1",
+                    "telegram:stop":  "powershell -ExecutionPolicy Bypass -File scripts/stop-remotecodex.ps1"
+                },
+    "dependencies":  {
+                         "cors":  "^2.8.5",
+                         "express":  "^4.18.2"
+                     },
+    "keywords":  [
+                     "codex",
+                     "codex-cli",
+                     "telegram-bot",
+                     "desktop-bridge",
+                     "agent-runtime",
+                     "developer-tools"
+                 ],
+    "license":  "AGPL-3.0"
+}

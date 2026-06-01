@@ -1,0 +1,30 @@
+node_modules/
+.DS_Store
+telemetry-id
+# Ignore external reference projects
+antigravity-claude-proxy-main/
+# Ignore credentials
+accounts.json
+auth.json
+.codex-claude-proxy/
+.internal/
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+pentagi
+apps/portfolio/dist/
+# Electron build output
+dist-electron/
+.test-config/
+.test-server-*.out.log
+.test-server-*.err.log
+tests/reports/
+*.log
+.remotecodex-runtime/
+tmp-appserver/
+tmp-appserver-ts/
+.env.*
+.claude/
+.idea/

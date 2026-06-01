@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RemoteCodex</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="codex-dashboard">
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main class="shell">
+    <section class="hero panel">
+      <div>
+        <p class="eyebrow">RemoteCodex bridge</p>
+        <h1>Chat with Codex from Telegram, keep the project context local.</h1>
+        <p class="hero-copy">A focused dashboard for the Telegram bot, Codex CLI runtime, image-aware prompts, clean file links, session resume, and Codex Desktop mirroring.</p>
+        <div class="hero-actions">
+          <button id="refresh-button" class="button primary">Refresh status</button>
+        </div>
+      </div>
+      <div class="signal-card">
+        <span class="pulse"></span>
+        <p class="signal-label">Gateway status</p>
+        <strong id="health-status">Checking...</strong>
+        <small id="health-detail">Waiting for localhost response</small>
+      </div>
+    </section>
+
+    <section class="grid metrics">
+      <article class="panel metric-card">
+        <span class="metric-kicker">Runtime</span>
+        <strong id="runtime-provider">Codex</strong>
+        <p id="runtime-detail">Loading runtime provider...</p>
+      </article>
+      <article class="panel metric-card">
+        <span class="metric-kicker">Telegram</span>
+        <strong id="channel-status">Checking</strong>
+        <p id="channel-detail">Loading channel settings...</p>
+      </article>
+      <article class="panel metric-card">
+        <span class="metric-kicker">Sessions</span>
+        <strong id="session-count">0</strong>
+        <p id="session-detail">Recent Codex conversations</p>
+      </article>
+      <article class="panel metric-card">
+        <span class="metric-kicker">Desktop bridge</span>
+        <strong id="bridge-status">Ready</strong>
+        <p>Telegram runs can be mirrored into Codex Desktop threads.</p>
+      </article>
+    </section>
+
+    <section class="grid main-grid">
+      <article class="panel command-card">
+        <p class="eyebrow">Telegram commands</p>
+        <h2>Use the bot like a project remote control.</h2>
+        <div class="command-list">
+          <code>/new build the landing page</code>
+          <code>/sessions</code>
+          <code>/resume latest polish the mobile view</code>
+          <code>/cancel</code>
+        </div>
+        <p class="muted">Plain messages continue the active Codex session. Image captions are forwarded as image-aware prompts.</p>
+      </article>
+
+      <article class="panel session-card">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Recent activity</p>
+            <h2>Codex sessions</h2>
+          </div>
+          <span id="last-updated" class="chip">Not refreshed</span>
+        </div>
+        <div id="sessions" class="session-list empty">No sessions loaded yet.</div>
+      </article>
+    </section>
+  </main>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
