@@ -2,7 +2,7 @@
 
 A focused Telegram bridge for controlling Codex inside a local project folder from your phone. RemoteCodex keeps the stack intentionally small: Codex CLI, Telegram, image-aware prompts, session resume, clean replies, and optional Codex Desktop mirroring.
 
-![RemoteCodex dashboard](docs/screenshot.png)
+![RemoteCodex dark dashboard](docs/dashboard-dark.png)
 
 ## Why RemoteCodex
 
